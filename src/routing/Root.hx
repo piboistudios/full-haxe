@@ -17,7 +17,7 @@ class Root {
         var response = Promise.ofJsPromise(axios.get('https://randomuser.me/api/?results=$results')).map(function(result) {
             switch(result) {
                 case Success(data):
-                    return new RandomUserResult(data.data).renderRandomUsers();
+                    return new RandomUserResult(data.data).render();
                 case Failure(e):
                     return 'error: $e';
             }

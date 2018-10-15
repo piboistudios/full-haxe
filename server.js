@@ -1135,7 +1135,7 @@ routing_Root.prototype = {
 			switch(result._hx_index) {
 			case 0:
 				var data = result.data;
-				return new templates_RandomUserResult(data.data).renderRandomUsers();
+				return new templates_RandomUserResult(data.data).render();
 			case 1:
 				var e = result.failure;
 				return tink_template__$Html_Html_$Impl_$.escape("error: " + Std.string(e));
@@ -1180,7 +1180,7 @@ var templates_RandomUserResult = function(data) {
 };
 templates_RandomUserResult.__name__ = true;
 templates_RandomUserResult.prototype = {
-	renderRandomUsers: function() {
+	RandomUsers: function() {
 		var ret = tink_template__$Html_Html_$Impl_$.buffer();
 		var this1 = "<head>\r\n\r\n    <link rel=\"stylesheet\"\r\n        href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css\"\r\n        integrity=\"sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B\"\r\n        crossorigin=\"anonymous\">\r\n    <style>\r\n    .mxw-5v {\r\n        max-width: 5vw;\r\n    }\r\n    p > label {\r\n        font-weight: 700;\r\n    }\r\n\r\n    .bg-secondary a {\r\n        color: #ffc107!important;\r\n    }\r\n    </style>\r\n</head>\r\n<body>\r\n\r\n    <div class=\"container-fluid bg-dark text-light\">\r\n        <p class=\"text-center row\">\r\n            <span class=\"col-10 h1\">Random User Results</span>\r\n            <span class=\"col-2\">\r\n                <a href=\"/\">Home</a>\r\n            </span>\r\n        </p>\r\n    </div>\r\n    <strong class=\"h4\">Results</strong>\r\n    ";
 		ret.s += this1;
@@ -1357,6 +1357,9 @@ templates_RandomUserResult.prototype = {
 		ret.s += this40;
 		var this41 = ret.s;
 		return this41;
+	}
+	,render: function() {
+		return this.RandomUsers();
 	}
 	,__class__: templates_RandomUserResult
 };

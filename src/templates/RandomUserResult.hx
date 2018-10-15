@@ -66,5 +66,8 @@ class RandomUserResult {
     }
     public var results : Array<User>;
     public var info : Info;
-    @:template public function renderRandomUsers();
+    @:template public function RandomUsers();
+    public function render() {
+        return this.RandomUsers();
+    }
 }
