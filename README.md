@@ -1,5 +1,5 @@
 # Full-Haxe.com
-Full-Haxe.com is meant to be the online resource for Haxe full-stack web development.
+Full-Haxe.com is meant to be the online resource for full-stack web development in Haxe.
 
 It is built ontop of the Tinkerbell libraries!
 ## Instructions
