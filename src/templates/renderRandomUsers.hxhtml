@@ -1,0 +1,218 @@
+<head>
+
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+        integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <style>
+    .mxw-5v {
+        max-width: 5vw;
+    }
+    p > label {
+        font-weight: 700;
+    }
+
+    .bg-secondary a {
+        color: #ffc107!important;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid bg-dark text-light">
+        <p class="text-center row">
+            <span class="col-10 h1">Random User Results</span>
+            <span class="col-2">
+                <a href="/">Home</a>
+            </span>
+        </p>
+    </div>
+    <strong class="h4">Results</strong>
+    {{foreach results}}
+    <div class="card p-2 bg-light m-2 border">
+
+
+
+        <ul>
+            <div class="row">
+                <div class="col-4 col-sm-2">
+                    <img src="{{picture.large}}" class="img-thumbnail
+                        img-fluid">
+                </div>
+                <div class="col-8 col-sm-10">
+                    <li>
+                        <h2>{{name.title}} {{name.first}} {{name.last}}</h2>
+                        <p>
+                            <label>Gender:</label>
+                            <span>{{gender}}</span>
+                        </p>
+                        <p>
+                            <label>Location:</label>
+                            <table class="table table-sm table-striped">
+                                <thead class="thead-dark">
+                                    <tr>
+
+                                        <th>Street</th>
+                                        <th>City</th>
+                                        <th>State</th>
+                                        <th>Postal Code</th>
+                                        <th>Coordinates</th>
+                                        <th>Timezone</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td class="text-truncate mxw-5v">{{location.street}}</td>
+                                        <td class="text-truncate mxw-5v">{{location.city}}</td>
+                                        <td class="text-truncate mxw-5v">{{location.state}}</td>
+                                        <td class="text-truncate mxw-5v">{{location.postcode}}</td>
+                                        <td class="text-truncate mxw-5v">
+                                            <ul>
+                                                <li>
+                                                    <label>Latitude</label>
+                                                    <span>{{location.coordinates.latitude}}</span>
+                                                </li>
+                                                <li>
+                                                    <label>Longitude</label>
+                                                    <span>{{location.coordinates.longitude}}</span>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td class="text-truncate mxw-5v">
+                                            <ul>
+                                                <li>
+                                                    <label>Offset</label>
+                                                    <span>{{location.timezone.offset}}</span>
+                                                </li>
+                                                <li>
+                                                    <label>Description</label>
+                                                    <span>{{location.timezone.description}}</span>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                        <p>
+                            <label>E-Mail:</label>
+                            <span><a href='mailto:{{email}}'>{{email}}</a></span>
+                        </p>
+                        <p>
+                            <label>Login</label>
+                            <table class="table table-sm table-striped">
+                                <thead class="thead-dark">
+
+                                    <tr>
+                                        <th>UUID</th>
+                                        <th>Username</th>
+                                        <th>Password</th>
+                                        <th>Salt</th>
+                                        <th>MD5</th>
+                                        <th>SHA1</th>
+                                        <th>SHA256</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td class="text-truncate mxw-5v">{{login.uuid}}</td>
+                                        <td class="text-truncate mxw-5v">{{login.username}}</td>
+                                        <td class="text-truncate mxw-5v">{{login.password}}</td>
+                                        <td class="text-truncate mxw-5v">{{login.salt}}</td>
+                                        <td class="text-truncate mxw-5v">{{login.md5}}</td>
+                                        <td class="text-truncate mxw-5v">{{login.sha1}}</td>
+                                        <td class="text-truncate mxw-5v">{{login.sha256}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                        <p>
+                            <label>DOB:</label>
+                            <span>{{dob.date}} ({{dob.age}} years)</span>
+                        </p>
+                        <p>
+                            <label>Registered:</label>
+                            <span>{{registered.date}} ({{registered.age}} years)</span>
+                        </p>
+                        <p>
+                            <label>Phone:</label>
+                            <span>{{phone}}</span>
+                        </p>
+                        <p>
+                            <label>ID:</label>
+                            <span>{{id.name}}: {{id.value}}</span>
+                        </p>
+                        <!-- <p>
+                        <label>Picture:</label>
+                        <table class="table table-sm table-striped">
+                            <thead class="thead-dark">
+
+                                <tr>
+                                    <th>Large</th>
+                                    <th>Medium</th>
+                                    <th>Thumbnail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td class="text-truncate mxw-5v">
+                                        <img src="{{picture.large}}">
+                                    </td>
+                                    <td class="text-truncate mxw-5v">
+                                        <img src="{{picture.medium}}">
+                                    </td>
+                                    <td class="text-truncate mxw-5v">
+                                        <img src="{{picture.thumbnail}}">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </p> -->
+                    <p>
+                        <label>NAT:</label>
+                        <span>{{nat}}</span>
+                    </p>
+                </li>
+
+            </ul>
+            <hr>
+        </div>
+        {{end}}
+    </div>
+
+    <div class="container-fluid bg-secondary text-center text-light border-top
+        border-bottom border-dark">
+        <div class="row">
+            <div class="col-3 offset-9">
+                <small>
+                    Data generated by <a href="https://randomuser.me/">randomuser.me</a>.
+                </small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+
+                <h4>API Info:</h4>
+                <p>
+                    <label>Seed:</label>
+                    <span>{{info.seed}}</span>
+                </p>
+                <p>
+                    <label># of Results:</label>
+                    <span>{{info.results}}</span>
+                </p>
+                <p>
+                    <label>Page No.:</label>
+                    <span>{{info.page}}</span>
+                </p>
+                <p>
+                    <label>Version:</label>
+                    <span>{{info.version}}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,9 @@
+-lib tink_web
+-lib tink_template
+--macro tink.Template.addFlavor('hxhtml', '{{', '}}', true)
+-lib hxnodejs
+
+-cp src
+-main Server
+-D js-es5
+-js server.js 

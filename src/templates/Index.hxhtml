@@ -1,0 +1,18 @@
+<head>
+
+</head>
+<body>
+    <h1>Full-Haxe.com</h1>
+    <p>
+        <label>Welcome to Full-Haxe,{{name != '' ? ' $name,' : ''}} the go-to
+            resource for full-stack Haxe development!</label>
+    </p>
+    <p>
+        <a href="/random/10">View 10 Random Users</a>
+    </p>
+    <p>
+        Powered by <a
+            target="_blank" href="https://haxetink.github.io/tink_web/#/">tink_web</a>
+        (<a target="_blank" href="https://github.com/haxetink/tink_web">github</a>)!
+    </p>
+</body>
