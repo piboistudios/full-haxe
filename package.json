@@ -1,0 +1,24 @@
+{
+  "name": "full-haxe",
+  "version": "1.0.0",
+  "description": "The go-to resource for full-stack web development with Haxe.",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piboistudios/full-haxe.git"
+  },
+  "author": "Gabriel Hayes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piboistudios/full-haxe/issues"
+  },
+  "homepage": "https://github.com/piboistudios/full-haxe#readme"
+}
